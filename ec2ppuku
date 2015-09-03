@@ -9,7 +9,7 @@ df=$(df)
 for drive in $(echo "$df" | grep -E '^/' | awk '{print $1}'); do
     # the space after drive is significant and prevents confusion
     # between drives like /dev/sda1 and /dev/sda12
-    free=$(echo "$df" | grep -E "^$drive " | awk '{print $5}' | grep -oE '[0-9]+')
+    free=$(echo "$df" | grep "$drive " | head -n1 | awk '{print $5}' | grep -oE '[0-9]+')
     if [ "$free" -gt "$Ec2ppukuLimit" ]; then
         echo "$drive use $free% is above ec2ppuku limit $Ec2ppukuLimit%"
         echo "Shutting down..."
