@@ -1,0 +1,7 @@
+language: cpp
+
+sudo: false
+
+script:
+- ./test/ec2ppuku.test.sh
+
