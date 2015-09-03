@@ -3,5 +3,6 @@ language: cpp
 sudo: false
 
 script:
+- df
 - ./test/ec2ppuku.test.sh
 
