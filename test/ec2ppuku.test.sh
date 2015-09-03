@@ -27,7 +27,7 @@ else
     echo "not ok - limit: 0%, halt"
     CODE=1
 fi
-if echo $out | grep -qE "/dev/[0-z]+ use [0-9]+% is above ec2ppuku limit 0%"; then
+if echo $out | grep -qE "/dev/[^ ]+ use [0-9]+% is above ec2ppuku limit 0%"; then
     echo "ok - limit: 0%, logs troublesome device"
 else
     echo "not ok - limit: 0%, logs troublesome device"
