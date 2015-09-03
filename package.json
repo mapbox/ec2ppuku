@@ -1,7 +1,0 @@
-{
-  "name": "ec2ppuku",
-  "version": "0.1.0",
-  "description": "Upstart service to self-destruct EC2s when disks fill up",
-  "author": "Mapbox (https://www.mapbox.com)",
-  "license": "ISC"
-}
